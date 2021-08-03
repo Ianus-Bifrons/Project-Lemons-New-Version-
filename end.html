@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="images/logo.png" type="image/png">
+	<title>Project Lemons</title>
+	<link rel="stylesheet" href="style.css"> <!--background/css-->
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+
+let decreaseBtn = document.getElementByClassName("button__decrease");
+let increaseBtn = document.getElementByClassName("button__increase");
+let counter = document.getElementByClassName("counter");
+let count = 0;
+
+
+decreaseBtn.addEventListener("click", () => {
+  count--;
+  
+  counter.innerHTML = count;
+  counterStyle();
+});
+
+increaseBtn.addEventListener("click", () => {
+  
+  
+  count++;
+
+  
+  counter.innerHTML = count;
+  counterStyle();
+});
+
+function counterStyle() {
+  if (count < 0) {
+    counter.classList.add("negative");
+  } else if (count > 0) {
+    counter.classList.add("positive");
+  } else {
+    counter.classList.remove("negative");
+    counter.classList.remove("positive");
+  }
+}
+
+
+</script>
+
+</head>
+
+<body>
+
+
+<div id="header">
+<img src="images/header.jpg" alt="Logo" width="340px" height="100px" />
+
+<div id="menu">
+
+</div>
+</div>
+
+<article>
+<h2>Thank you for your submission!</h2>
+
+<p>Press the button below if you would like to rerun your submission.</p>
+</article>
+
+<div class="text-center">
+  <button type="button" class="button" onclick="location.href='login.php'">
+    <span class="button__text">Rerun</span>
+  </button>
+</div>
+
+</body>
+</html>
