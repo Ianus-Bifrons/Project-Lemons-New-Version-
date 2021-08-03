@@ -1,0 +1,389 @@
+*{
+	margin: 0;
+	padding: 0;
+	
+}
+#header
+{
+	position:relative;
+	display:flex;
+	padding: 6px 10px;
+	justify-content: space-between;
+	align-items: center;
+}
+#menu
+{
+	flex:1;
+	text-align:right;	
+}
+#menu ul li {
+	list-style:none;
+	display:inline-block;
+	padding:6px 20px;
+	
+	position:relative;
+	text-decoration:none;
+}
+#menu ul li a{
+	font-size:25px;
+	text-decoration:none;
+}
+#section{
+	padding: 10px 35px;
+	display:flex;
+	
+	
+	
+	
+}
+h1{
+	margin-top:5px;
+	font-size:30px;
+	padding-left:20px;
+	float:right;
+	
+}table {
+  border-collapse: collapse;
+ width:90%;
+ margin-left:35px;
+ margin-top:20px;
+
+}
+td:hover { background: 	#DCDCDC; }
+td a { 
+    display: block; 
+	text-decoration:none;
+   
+    
+}
+th, td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+:root {
+  /*   color variables */
+  --clr-negative: #ff1744;
+  --clr-positive: #2abf77;
+  --clr-gray100: #f0f7f8;
+  --clr-gray200: #cfd8dc;
+  --clr-gray300: #a7b7be;
+  --clr-gray400: #6b7e86;
+  --clr-gray500: #425a65;
+
+  /*   border radius */
+  --radius: 0.2rem;
+}
+
+
+.counter {
+  font-size: 16px;
+
+}
+#cool
+{
+	
+	border-radius: 50%;
+}
+#button__wrapper {
+  display: flex;
+  gap: 1rem;
+
+  & > * {
+    border: none;
+    background-color: white;
+    box-shadow: 0px 0px 10px var(--clr-gray200);
+    font-weight: bold;
+    font-size: 2rem;
+    color: inherit;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 250ms ease-in-out, transform 50ms ease-in-out;
+
+    &:hover {
+      background-color: var(--clr-gray200);
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}
+
+.negative {
+  color: var(--clr-negative);
+  animation: pulse 500ms ease-in-out;
+}
+
+.positive {
+  color: var(--clr-positive);
+  animation: pulse 500ms ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.button,
+.button2{
+  display: inline-flex;
+  height: 40px;
+  padding: 7px 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  overflow: hidden;
+  font-family: 'quicksand', sans-serif;
+  font-size: 25px;
+  font-weight: 250;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.button:hover{
+  background: yellowgreen;
+}
+
+.button:active{
+  background: seagreen;
+}
+
+.button2:hover{
+  background: yellowgreen;
+}
+
+.button2:active{
+  background: seagreen;
+}
+
+p{
+ text-align:center
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.loginbox{
+  width: 320px;
+  height: 420px;
+  background: #0000;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  box-sizing: border-box;
+}
+
+.avatar{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+}
+
+.loginbox p{
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.loginbox input{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.loginbox input[type="text"]
+{
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: black;
+  font-size: 16px;
+  text-align: center;
+}
+
+.loginbox input[type="submit"]
+{
+  border: none;
+  outline: none;
+  height: 40px;
+  background: yellowgreen;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+.loginbox input[type="submit"]:hover
+{
+  cursor: pointer;
+  background: seagreen;
+  color: #000;
+}
+
+.loginheader
+{
+  position:relative;
+  display:flex;
+  padding: 6px 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: max-height 650ms;
+}
+
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  top: 50%;
+  left: 0;
+  content: "";
+}
+
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.accordions {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: max-height 650ms;
+}
+
+
+.active, .accordions:hover {
+  background-color: #ccc; 
+}
+
+.accordions:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  font-size: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  float: left;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+article {
+  padding-top: 30px;
+  width: 70%;
+  font-size: 20px;
+  text-align: center;
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p{
+  padding: 20px;
+}
+
+h2{
+  text-align: center;
+}
